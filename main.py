@@ -1,13 +1,6 @@
 '''
 STEPS : 
-Use 'https://www.tunemymusic.com/transfer/youtube-to-file' to get csv from youtube/spotify playlist
-Download CSV file local folder (myDB)
-Install python 3.9+
-Make a virtual env (python -m venv env)
-Activate virtual env (VS code -> Select interpreter or env->Scripts->activate.bat)
-Install required modules (pip install requirements.txt)
-Run main.py
-Logs file : (local path)/logs.log
+README.md for steps
 
 Developer : Vaibhav Sharma
 '''
@@ -59,7 +52,7 @@ if __name__ == "__main__":
     generate_download_threads(simultaneous_downloads,download_song_list,yourOutputFolder)
     
     '''
-    single thread code 
+    single thread code  
        for songX in list_songs[download_start_index:download_end_index]:
         download_by_search(songX,yourOutputFolder)
         print('Complete : ' + str(current_index)  + ' of ' + str(len(download_song_list)))
