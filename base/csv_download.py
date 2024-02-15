@@ -15,7 +15,7 @@ def csv_download_routine_advanced():
     download_song_list = list_songs[download_start_index:download_end_index]
     
     print('Total songs : ' + str(len(download_song_list)))
-    generate_download_threads(simultaneous_download_thread_count,download_song_list,download_location)
+    generate_download_threads(num=simultaneous_download_thread_count,values=download_song_list,output_path=download_location)
 
 def csv_download_routine_simple():
     database : str = 'database'
@@ -29,4 +29,4 @@ def csv_download_routine_simple():
     download_song_list = list_songs[download_start_index:download_end_index]
     
     print('Total songs : ' + str(len(download_song_list)))
-    generate_download_threads(simultaneous_download_thread_count,download_song_list,download_location)
+    generate_download_threads(num=simultaneous_download_thread_count,values=download_song_list,output_path=download_location)

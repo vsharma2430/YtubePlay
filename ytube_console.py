@@ -18,6 +18,7 @@ if __name__ == "__main__":
     while(download_type < 5):
         print('Welcome to YtubePlay')
         download_type = get_int(user_input('Choose download type : 1.Title 2.Link 3.CSV(simple) 4.CSV(Advanced) 5.Exit','1'),1)
+        #download_format = user_input('Convert to audio (y/n)','y').lower()
         if(download_type == 1):
             search_download_routine()
         elif(download_type == 2):
