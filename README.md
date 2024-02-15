@@ -1,5 +1,11 @@
 # About
-Python command line application to download songs of a csv database using youtube.
+Python command line application to download songs / videos using youtube.
+
+## Download Options
+- By song title(s) / search string
+- By link (song/playlist)
+- By CSV (simple) - csv/database location (if not detected at default location),all songs
+- By CSV (advanced) - csv/database location,start index,end index,output location,simultaneous thread count
 
 # Steps to download songs
 - Use 'https://www.tunemymusic.com/transfer/youtube-to-file' to get csv from youtube/spotify etc. playlist

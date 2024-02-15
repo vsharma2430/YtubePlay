@@ -4,29 +4,33 @@ README.md for steps
 
 Developer : Vaibhav Sharma
 '''
-from base.thread import generate_download_threads
-from base.db_read import readDir
-from base.console_rw import user_input,get_int,print_console
-import logging
-
-def define_logger():
-    logging.basicConfig(filename="logs.log",format='%(asctime)s %(message)s',filemode='w',level=logging.INFO)
-    logger = logging.getLogger('main_script')
+from base.console_rw import user_input,get_int
+from base.csv_download import csv_download_routine_simple,csv_download_routine_advanced
+from base.search_download import search_download_routine
+from base.link_download import link_download_routine
+from base.default import define_logger,create_default_dir
 
 if __name__ == "__main__":
-    define_logger()
-    database :str  = user_input('Enter DB file/folder Location ?', 'database') 
-    list_songs = readDir(database) 
-    print_console(list_songs)
-    download_start_index = get_int(user_input('Download start index ?','1'),1)-1
-    download_end_index = get_int(user_input('Download end index ?',str(len(list_songs))),len(list_songs))
-    download_location :str = user_input('Enter output Location ?','downloads')
-    simultaneous_download_thread_count = get_int(user_input('Simulatneous downloads ?','25'),25)
-    download_song_list = list_songs[download_start_index:download_end_index]
+    logger = define_logger()
+    create_default_dir()
     
-    print('Total songs : ' + str(len(download_song_list)))
-    generate_download_threads(simultaneous_download_thread_count,download_song_list,download_location)
-    feedback = user_input('Thanks for using this application.')
+    download_type : int = 1
+    while(download_type < 5):
+        print('Welcome to YtubePlay')
+        download_type = get_int(user_input('Choose download type : 1.Title 2.Link 3.CSV(simple) 4.CSV(Advanced) 5.Exit','1'),1)
+        if(download_type == 1):
+            search_download_routine()
+        elif(download_type == 2):
+            link_download_routine()
+        elif(download_type == 3):
+            csv_download_routine_simple()
+        elif(download_type == 4):
+            csv_download_routine_advanced()
+        else:
+            break
+        print('Operation complete\n')
+    
+    feedback = user_input('Thanks you.\nPress enter to exit')
     
     
 

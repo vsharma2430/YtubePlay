@@ -37,7 +37,7 @@ def getLink(songName:str):
 def download_by_search(search_string:str,download_path:str=''):
 	try:
 		print('Download by search operation started for ' + search_string)
-		link = getLink(search_string)
+		link = getLink(search_string.strip())
 		download_vdo(link,download_path)
 		print('Download by search operation complete for ' + search_string)
 	except:

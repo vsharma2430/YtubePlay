@@ -1,4 +1,6 @@
 import time
+from datetime import date
+
 
 # decorator to calculate duration
 # taken by any function.
@@ -19,3 +21,7 @@ def calculate_time(func):
         print("Total time taken by : ", func.__name__, " is " , end - begin , " seconds")
  
     return inner1
+
+def get_date_stamp():
+    today = date.today()
+    return str(today)

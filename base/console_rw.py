@@ -7,7 +7,7 @@ def default_data_str(user_input:str,default_input:str):
 
 def user_input(message:str,default_input:str=''):
     if(default_input!=''):
-        user_input = input( message.strip() + ' (default : ' + str(default_input) + ')') 
+        user_input = input( message.strip() + ' (default : ' + str(default_input) + ') ') 
     else:
         user_input = input(message.strip()) 
 
