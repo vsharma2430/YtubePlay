@@ -16,6 +16,6 @@ def calculate_time(func):
  
         # storing time after function execution
         end = time.time()
-        print("Total time taken by : ", func.__name__, " is " , end - begin)
+        print("Total time taken by : ", func.__name__, " is " , end - begin , " seconds")
  
     return inner1
