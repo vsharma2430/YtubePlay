@@ -22,6 +22,6 @@ Python command line application to download songs/videos using YouTube.
 - Install python 3.9+ from 'https://www.python.org/downloads/'
 - (recommended) Make a virtual env (python -m venv env)
 - (recommended) Activate virtual env (VS code -> Select interpreter or start env/Scripts/activate.bat)
-- Install required modules (pip install requirements.txt)
+- Install required modules (pip install -r requirements.txt)
 - Generate executable using the command (pyinstaller ytube_console.py --onefile)
 - Executable generated at location (<repository_location>\dist\ytube_console.exe)
